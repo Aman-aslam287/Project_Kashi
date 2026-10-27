@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction History | Project Kashi</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<header class="topbar">
+    <div class="brand">
+        <div class="brand-logo">K</div>
+        <div>
+            <h1>Project Kashi</h1>
+            <p>Banking Management System</p>
+        </div>
+    </div>
+
+
+<div class="system-status">
+    <span class="status-dot"></span>
+    Transaction History
+</div>
+
+
+</header>
+
+<nav class="main-nav">
+    <a href="index.html">Home</a>
+    <a href="accounts.html">Accounts</a>
+    <a href="transactions.html">Transactions</a>
+    <a href="loan.html">Loans</a>
+    <a href="transfer.html">Transfer</a>
+    <a href="history.html" class="active">Transaction History</a>
+</nav>
+
+<main class="container">
+
+
+<section class="welcome-section">
+    <div>
+        <p class="eyebrow">TRANSACTION RECORDS</p>
+        <h1>Transaction History</h1>
+        <p class="welcome-description">
+            View deposits, withdrawals and transfers recorded for a particular bank account.
+        </p>
+    </div>
+    <div class="welcome-icon">↻</div>
+</section>
+
+<div id="message" class="message"
+     role="status" aria-live="polite" hidden></div>
+
+<section class="card">
+    <div class="section-heading">
+        <div>
+            <p class="eyebrow">SEARCH</p>
+            <h2>Find Transactions</h2>
+            <p class="section-description">
+                Enter the Account ID to view its transaction records.
+            </p>
+        </div>
+    </div>
+
+    <form id="historyForm" class="history-form">
+        <div class="form-group">
+            <label for="history_account">Account ID</label>
+            <input
+                type="number"
+                id="history_account"
+                name="history_account"
+                min="1"
+                step="1"
+                required
+                placeholder="Enter Account ID"
+            >
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" class="button button-primary">
+                Search Transactions
+            </button>
+        </div>
+    </form>
+</section>
+
+<section class="card">
+    <div class="section-heading">
+        <div>
+            <p class="eyebrow">RECORDS</p>
+            <h2>Transaction Records</h2>
+        </div>
+    </div>
+
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>Transaction ID</th>
+                    <th>Type</th>
+                    <th>Amount (₹)</th>
+                    <th>Date</th>
+                    <th>Description</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="historyTable">
+                <tr>
+                    <td colspan="6">Enter an Account ID to view transactions.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<div class="back-button-container">
+    <button type="button"
+            class="back-button button button-secondary">
+        ← Back
+    </button>
+</div>
+
+
+</main>
+
+<footer class="footer">
+    <p>Project Kashi · Banking Management System</p>
+    <p>Academic DBMS Project</p>
+</footer>
+
+</body>
+</html>

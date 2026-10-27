@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accounts | Project Kashi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+    <div class="brand">
+        <div class="brand-logo">K</div>
+        <div>
+            <h1>Project Kashi</h1>
+            <p>Banking Management System</p>
+        </div>
+    </div>
+
+
+<div class="system-status">
+    <span class="status-dot"></span>
+    Account Management
+</div>
+
+
+</header>
+
+<nav class="main-nav">
+    <a href="index.html">Home</a>
+    <a href="accounts.html" class="active">Accounts</a>
+    <a href="transactions.html">Transactions</a>
+    <a href="loan.html">Loans</a>
+    <a href="transfer.html">Transfer</a>
+    <a href="history.html">Transaction History</a>
+</nav>
+
+<main class="container accounts-page">
+
+
+<section class="welcome-section">
+    <div>
+        <p class="eyebrow">ACCOUNT MANAGEMENT</p>
+        <h2>Manage Your Accounts</h2>
+        <p class="welcome-description">
+            Open new bank accounts or view existing accounts
+            and their current details.
+        </p>
+    </div>
+
+    <div class="welcome-icon">₹</div>
+</section>
+
+<section class="card">
+    <div class="section-heading">
+        <div>
+            <p class="eyebrow">ACCOUNT SERVICES</p>
+            <h2>What would you like to do?</h2>
+            <p class="section-description">
+                Select an option to continue.
+            </p>
+        </div>
+    </div>
+
+    <div class="transaction-grid">
+
+        <article class="transaction-card">
+            <div class="transaction-icon">＋</div>
+
+            <h3>Open an Account</h3>
+
+            <p class="transaction-description">
+                Register customer details and create a new bank account.
+            </p>
+
+            <a href="create-account.html"
+               class="button button-primary button-full">
+                Open Account
+            </a>
+        </article>
+
+        <article class="transaction-card">
+            <div class="transaction-icon">▤</div>
+
+            <h3>Account Overview</h3>
+
+            <p class="transaction-description">
+                View existing accounts, account types, balances and statuses.
+            </p>
+
+            <a href="acc_overview.html"
+            class="button button-primary button-full">
+                 View Accounts
+            </a>
+        </article>
+
+    </div>
+</section>
+
+
+<!-- Branch Account Summary -->
+<section class="card" id="branchSummarySection">
+    <div class="section-heading">
+        <div>
+            <p class="eyebrow">ADVANCED SQL · VIEW</p>
+            <h2>Branch Account Summary</h2>
+            <p class="section-description">
+                View the total accounts and total balance maintained by each branch.
+            </p>
+        </div>
+        <button type="button"
+                class="button button-secondary"
+                id="refreshBranchSummary">
+            Refresh
+        </button>
+    </div>
+
+    <div id="branchSummaryMessage" class="message" hidden></div>
+
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>Branch ID</th>
+                    <th>Branch Name</th>
+                    <th>Total Accounts</th>
+                    <th>Total Balance</th>
+                </tr>
+            </thead>
+            <tbody id="branchSummaryTable">
+                <tr>
+                    <td colspan="4">Loading branch summary...</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+
+<!-- Customer Account Lookup -->
+<section class="card" id="customerAccountLookupSection">
+    <div class="section-heading">
+        <div>
+            <p class="eyebrow">ADVANCED SQL · PROCEDURE & FUNCTION</p>
+            <h2>Customer Account Lookup</h2>
+            <p class="section-description">
+                Retrieve a customer's accounts and calculate their total balance.
+            </p>
+        </div>
+    </div>
+
+    <form id="customerAccountLookupForm">
+        <div class="form-group">
+            <label for="lookupCustomerId">Customer ID</label>
+            <input
+                type="number"
+                id="lookupCustomerId"
+                name="customer_id"
+                min="1"
+                step="1"
+                required
+                placeholder="Enter customer ID"
+            >
+        </div>
+
+        <button type="submit" class="button button-primary">
+            Find Accounts
+        </button>
+    </form>
+
+    <div id="customerLookupMessage" class="message" hidden></div>
+
+    <div id="customerTotalBalance" hidden>
+        <h3>Customer Total Balance</h3>
+        <p id="customerTotalBalanceValue">—</p>
+    </div>
+
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>Customer ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Account Number</th>
+                    <th>Account Type</th>
+                    <th>Balance</th>
+                </tr>
+            </thead>
+            <tbody id="customerAccountsTable">
+                <tr>
+                    <td colspan="6">Enter a customer ID to begin.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+ <div class="back-button-container">
+    <a href="index.html" class="back-button button button-secondary">
+        ← Back to Dashboard
+    </a>
+</div>
+</main>
+
+<footer class="footer">
+    <p>Project Kashi · Banking Management System</p>
+    <p>Academic DBMS Project</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

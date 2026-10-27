@@ -109,7 +109,7 @@ SELECT
 FROM ACCOUNT;
 
 
--- Query 10 (Find customers whose total loan payments exceed 20000)
+-- Query 10 (Find customers whose total loan payments exceed 10000)
 
 SELECT
     C.CustomerID,
@@ -122,4 +122,4 @@ ON C.CustomerID = L.CustomerID
 JOIN LOAN_PAYMENT LP
 ON L.LoanID = LP.LoanID
 GROUP BY C.CustomerID, C.First_name, C.Last_name
-HAVING SUM(LP.Amount) > 20000;
+HAVING SUM(LP.Amount) > 10000;

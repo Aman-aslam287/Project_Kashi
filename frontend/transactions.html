@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Operations | Project Kashi</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<header class="topbar">
+    <div class="brand">
+        <div class="brand-logo">K</div>
+        <div>
+            <h1>Project Kashi</h1>
+            <p>Banking Management System</p>
+        </div>
+    </div>
+
+
+<div class="system-status">
+    <span class="status-dot"></span>
+    Account Operations
+</div>
+
+
+</header>
+
+<nav class="main-nav">
+    <a href="index.html">Home</a>
+    <a href="accounts.html">Accounts</a>
+    <a href="transactions.html" class="active">Transactions</a>
+    <a href="loan.html">Loans</a>
+    <a href="transfer.html">Transfer</a>
+    <a href="history.html">Transaction History</a>
+</nav>
+
+<main class="container transactions-page">
+
+
+<section class="welcome-section">
+    <div>
+        <p class="eyebrow">ACCOUNT OPERATIONS</p>
+        <h2>Manage Your Money</h2>
+        <p class="welcome-description">
+            Choose whether you want to deposit money into an account
+            or withdraw money from an existing account.
+        </p>
+    </div>
+    <div class="welcome-icon">₹</div>
+</section>
+
+<section class="transaction-grid operation-selection">
+
+    <article class="transaction-card operation-card">
+        <div class="transaction-icon">↓</div>
+        <h3>Deposit Money</h3>
+        <p class="transaction-description">
+            Add money to an existing bank account and record
+            the transaction.
+        </p>
+        <a href="deposit.html"
+           class="button button-primary button-full">
+            Deposit Now
+        </a>
+    </article>
+
+    <article class="transaction-card operation-card">
+        <div class="transaction-icon">↑</div>
+        <h3>Withdraw Money</h3>
+        <p class="transaction-description">
+            Withdraw money from an existing bank account,
+            subject to the available balance.
+        </p>
+        <a href="withdraw.html"
+           class="button button-primary button-full">
+            Withdraw Now
+        </a>
+    </article>
+
+</section>
+
+<div class="back-button-container">
+    <a href="index.html" class="back-button button button-secondary">
+        ← Back to Dashboard
+    </a>
+</div>
+</main>
+
+<footer class="footer">
+    <p>Project Kashi · Banking Management System</p>
+    <p>Academic DBMS Project</p>
+</footer>
+
+</body>
+</html>

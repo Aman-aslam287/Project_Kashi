@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Payments | Project Kashi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="brand">
+            <h1>Project Kashi</h1>
+            <p>Banking Management System</p>
+        </div>
+
+</header>
+    <nav class="main-nav">
+    <a href="index.html">Home</a>
+    <a href="accounts.html">Accounts</a>
+    <a href="transactions.html">Transactions</a>
+    <a href="loan.html" class="active">Loans</a>
+    <a href="transfer.html">Transfer</a>
+    <a href="history.html">Transaction History</a>
+</nav>
+
+
+<main class="container">
+<section class="welcome-section loan-welcome">        <p class="eyebrow">LOAN SERVICES</p>
+        <h2>Loan Payment Management</h2>
+        <p class="section-description">
+            Record loan repayments and view the payment history for a loan.
+        </p>
+    </section>
+
+    <section class="card">
+        <div class="section-heading">
+            <h2>Record a Payment</h2>
+            <p class="section-description">
+                Enter the loan ID and payment details below.
+            </p>
+        </div>
+
+        <form id="loanPaymentForm">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="paymentLoanId">Loan ID</label>
+                    <input
+                        type="number"
+                        id="paymentLoanId"
+                        min="1"
+                        step="1"
+                        required
+                        placeholder="Enter loan ID"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="paymentAmount">Payment Amount (₹)</label>
+                    <input
+                        type="number"
+                        id="paymentAmount"
+                        name="amount"
+                        min="0.01"
+                        step="0.01"
+                        required
+                        placeholder="Enter payment amount"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="paymentDate">Payment Date</label>
+                    <input
+                        type="date"
+                        id="paymentDate"
+                        name="payment_date"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="paymentMode">Payment Mode</label>
+                    <select id="paymentMode" name="payment_mode" required>
+                        <option value="">Select payment mode</option>
+                        <option value="Cash">Cash</option>
+                        <option value="UPI">UPI</option>
+                        <option value="Card">Card</option>
+                        <option value="Bank Transfer">Bank Transfer</option>
+                        <option value="Cheque">Cheque</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="button button-primary">
+                    Record Payment
+                </button>
+                <button type="reset" class="button button-secondary">
+                    Clear Form
+                </button>
+            </div>
+
+            <div id="paymentFormMessage" class="message" role="status" hidden></div>
+        </form>
+    </section>
+
+    <section class="card">
+        <div class="section-heading">
+            <h2>Payment History</h2>
+            <p class="section-description">
+                Enter a loan ID to retrieve its recorded payments.
+            </p>
+        </div>
+
+        <form id="paymentHistoryForm">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="historyLoanId">Loan ID</label>
+                    <input
+                        type="number"
+                        id="historyLoanId"
+                        min="1"
+                        step="1"
+                        required
+                        placeholder="Enter loan ID"
+                    >
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="button button-primary">
+                    View Payments
+                </button>
+            </div>
+        </form>
+
+        <div id="paymentHistoryMessage" class="message" role="status" hidden></div>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Payment ID</th>
+                        <th>Loan ID</th>
+                        <th>Payment Date</th>
+                        <th>Amount</th>
+                        <th>Payment Mode</th>
+                        <th>Reference Number</th>
+                    </tr>
+                </thead>
+                <tbody id="loanPaymentTableBody">
+                    <tr>
+                        <td colspan="6">Enter a loan ID to view payment history.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+        <div class="back-button-container">
+    <button type="button" class="back-button button button-secondary">
+        ← Back
+    </button>
+</div>
+</main>
+
+<footer class="footer">
+    <p>Project Kashi | Banking Management System</p>
+</footer>
+
+<script src="script.js"></script>
+
+
+</body>
+</html>

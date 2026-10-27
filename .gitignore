@@ -18,3 +18,8 @@ venv/
 .vscode/
 .DS_Store
 Thumbs.db
+
+
+# Node.js and Vite generated files
+node_modules/
+dist/

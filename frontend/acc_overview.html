@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accounts | Project Kashi</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header class="topbar">
+    <div class="brand">
+        <div class="brand-logo">K</div>
+        <div>
+            <h1>Project Kashi</h1>
+            <p>Banking Management System</p>
+        </div>
+    </div>
+    <div class="system-status">
+        <span class="status-dot"></span>
+        Account Overview
+    </div>
+</header>
+
+<nav class="main-nav">
+    <a href="index.html">Home</a>
+    <a href="accounts.html" class="active">Accounts</a>
+    <a href="transactions.html">Transactions</a>
+    <a href="loan.html">Loans</a>
+    <a href="transfer.html">Transfer</a>
+    <a href="history.html">Transaction History</a>
+</nav>
+
+<main class="container">
+
+    <section class="welcome-section">
+        <div>
+            <p class="eyebrow">ACCOUNT MANAGEMENT</p>
+            <h2>Account Overview</h2>
+            <p class="welcome-description">
+                View account IDs, account numbers, account types,
+                opening dates, balances, statuses and branch details.
+            </p>
+        </div>
+        <div class="welcome-icon">₹</div>
+    </section>
+
+    <div id="message" class="message"
+         role="status" aria-live="polite" hidden></div>
+
+    <section class="card">
+
+        <div class="section-heading">
+            <div>
+                <h2>Bank Accounts</h2>
+                <p class="section-description">
+                    Account records currently stored in the database.
+                </p>
+            </div>
+
+            <button id="refreshAccounts"
+                    class="button button-secondary"
+                    type="button">
+                Refresh Accounts
+            </button>
+        </div>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Account ID</th>
+                        <th>Account Number</th>
+                        <th>Account Type</th>
+                        <th>Opening Date</th>
+                        <th>Balance (₹)</th>
+                        <th>Status</th>
+                        <th>Branch ID</th>
+                    </tr>
+                </thead>
+                <tbody id="accountsTable">
+                    <tr>
+                        <td colspan="7">Loading accounts...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </section>
+
+    <div class="form-actions page-back">
+        <button type="button"
+                class="button button-secondary back-button">
+            ← Back
+        </button>
+    </div>
+
+</main>
+
+<footer class="footer">
+    <p>Project Kashi · Banking Management System</p>
+    <p>Academic DBMS Project</p>
+</footer>
+
+</body>
+</html>

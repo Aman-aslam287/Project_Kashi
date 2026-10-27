@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Kashi | Loans</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header class="topbar">
+    <div class="brand">
+        <div class="brand-logo">K</div>
+        <div>
+            <h1>Project Kashi</h1>
+            <p>Banking Management System</p>
+        </div>
+    </div>
+
+    <div class="system-status">
+        <span class="status-dot"></span>
+        Banking Services
+    </div>
+</header>
+
+<nav class="main-nav">
+    <a href="index.html">Home</a>
+    <a href="accounts.html">Accounts</a>
+    <a href="transactions.html">Transactions</a>
+    <a href="loan.html" class="active">Loans</a>
+    <a href="transfer.html">Transfer</a>
+    <a href="history.html">Transaction History</a>
+</nav>
+
+
+    <main class="container">
+
+<section class="welcome-section loan-welcome">            <p class="eyebrow">LOAN MANAGEMENT</p>
+            <h2>Loans Overview</h2>
+            <p>
+                Manage customer loans, monitor their status, and keep track
+                of loan repayments.
+            </p>
+        </section>
+
+        <section class="transaction-grid">
+
+            <article class="transaction-card">
+                <div class="transaction-icon">🏦</div>
+                <h3>Total Loans</h3>
+                <p class="transaction-description">
+                    All registered loans
+                </p>
+                <h2 id="totalLoans">—</h2>
+            </article>
+
+            <article class="transaction-card">
+                <div class="transaction-icon">📄</div>
+                <h3>Active Loans</h3>
+                <p class="transaction-description">
+                    Loans currently active
+                </p>
+                <h2 id="activeLoans">—</h2>
+            </article>
+
+            <article class="transaction-card">
+                <div class="transaction-icon">✅</div>
+                <h3>Closed Loans</h3>
+                <p class="transaction-description">
+                    Loans marked as closed
+                </p>
+                <h2 id="closedLoans">—</h2>
+            </article>
+
+        </section>
+
+        <section class="card">
+            <div class="section-heading">
+                <h2>Loan Services</h2>
+                <p class="section-description">
+                    Choose an operation to continue.
+                </p>
+            </div>
+
+            <div class="transaction-grid">
+
+                <article class="transaction-card">
+                    <div class="transaction-icon">➕</div>
+                    <h3>Loan Management</h3>
+                    <p class="transaction-description">
+                        Register new loans and view existing loan records.
+                    </p>
+                    <a class="button button-primary"
+                       href="loan-management.html">
+                        Manage Loans
+                    </a>
+                </article>
+
+                <article class="transaction-card">
+                    <div class="transaction-icon">💳</div>
+                    <h3>Loan Payments</h3>
+                    <p class="transaction-description">
+                        Record repayments and view payment history.
+                    </p>
+                    <a class="button button-primary"
+                       href="loan-payments.html">
+                        Manage Payments
+                    </a>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="card">
+            <div class="section-heading">
+                <h2>Registered Loans</h2>
+                <p class="section-description">
+                    Loan records retrieved from the database.
+                </p>
+            </div>
+
+            <p id="loadingMessage">Loading loan records...</p>
+
+            <p id="errorMessage" class="message" hidden></p>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Loan ID</th>
+                            <th>Customer</th>
+                            <th>Loan Type</th>
+                            <th>Loan Amount</th>
+                            <th>Interest Rate</th>
+                            <th>Tenure</th>
+                            <th>Estimated Interest (₹)</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="loanTableBody">
+                        <tr>
+                            <td colspan="7">Loading...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+       <div class="back-button-container">
+    <a href="index.html" class="back-button button button-secondary">
+        ← Back to Dashboard
+    </a>
+</div>
+    </main>
+
+    <footer class="footer">
+        <p>Project Kashi — Banking Management System</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

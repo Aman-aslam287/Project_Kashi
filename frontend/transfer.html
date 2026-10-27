@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfer Money | Project Kashi</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<header class="topbar">
+    <div class="brand">
+        <div class="brand-logo">K</div>
+        <div>
+            <h1>Project Kashi</h1>
+            <p>Banking Management System</p>
+        </div>
+    </div>
+
+
+<div class="system-status">
+    <span class="status-dot"></span>
+    Money Transfer
+</div>
+
+
+</header>
+
+<nav class="main-nav">
+    <a href="index.html">Home</a>
+    <a href="accounts.html">Accounts</a>
+    <a href="transactions.html">Transactions</a>
+    <a href="loan.html">Loans</a>
+    <a href="transfer.html" class="active">Transfer</a>
+    <a href="history.html">Transaction History</a>
+</nav>
+
+<main class="container">
+
+
+<section class="welcome-section">
+    <div>
+        <p class="eyebrow">ACCOUNT OPERATIONS</p>
+        <h2>Transfer Money</h2>
+        <p class="welcome-description">
+            Transfer money from one bank account to another.
+            Enter both account IDs and the amount to transfer.
+        </p>
+    </div>
+    <div class="welcome-icon">⇄</div>
+</section>
+
+<div id="message" class="message"
+     role="status" aria-live="polite" hidden></div>
+
+<section class="card">
+
+    <div class="section-heading">
+        <div>
+            <p class="eyebrow">TRANSFER</p>
+            <h2>Transfer Details</h2>
+            <p class="section-description">
+                Check the account IDs carefully before submitting.
+            </p>
+        </div>
+    </div>
+
+    <form id="transferForm">
+
+        <div class="form-grid">
+
+            <div class="form-group">
+                <label for="from_account">From Account ID</label>
+                <input
+                    type="number"
+                    id="from_account"
+                    name="from_account"
+                    min="1"
+                    step="1"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="to_account">To Account ID</label>
+                <input
+                    type="number"
+                    id="to_account"
+                    name="to_account"
+                    min="1"
+                    step="1"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="transfer_amount">Amount (₹)</label>
+                <input
+                    type="number"
+                    id="transfer_amount"
+                    name="transfer_amount"
+                    min="0.01"
+                    step="0.01"
+                    required
+                >
+            </div>
+
+        </div>
+
+        <div class="form-actions">
+            <button type="submit"
+                    class="button button-primary">
+                Transfer Money
+            </button>
+
+            <button type="reset"
+                    class="button button-secondary">
+                Clear Form
+            </button>
+        </div>
+
+    </form>
+
+</section>
+
+<div class="back-button-container">
+    <button type="button"
+            class="back-button button button-secondary">
+        ← Back
+    </button>
+</div>
+
+
+</main>
+
+<footer class="footer">
+    <p>Project Kashi · Banking Management System</p>
+    <p>Academic DBMS Project</p>
+</footer>
+
+</body>
+</html>

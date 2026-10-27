@@ -1,0 +1,925 @@
+/* ------------------------------
+Global Theme
+------------------------------ */
+
+:root {
+--yellow: #f5d96b;
+--yellow-light: #fff9df;
+--yellow-hover: #edcc4f;
+
+
+--text: #282820;
+--muted: #77776e;
+
+--border: #eae8df;
+--background: #fafaf7;
+--white: #ffffff;
+
+--success: #237a45;
+--success-background: #edf8f0;
+
+--error: #b42318;
+--error-background: #fff0ee;
+
+--shadow: 0 4px 20px rgba(40, 40, 32, 0.04);
+
+
+}
+
+* {
+  box-sizing: border-box;
+  }
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+margin: 0;
+background-color: var(--background);
+color: var(--text);
+font-family: Arial, Helvetica, sans-serif;
+font-size: 15px;
+line-height: 1.6;
+}
+
+button,
+input,
+select {
+font: inherit;
+}
+
+button {
+cursor: pointer;
+}
+
+button:disabled {
+cursor: not-allowed;
+opacity: 0.6;
+}
+
+[hidden] {
+display: none !important;
+}
+
+/* ------------------------------
+Header
+------------------------------ */
+
+.topbar {
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 20px;
+
+
+padding: 18px 6%;
+background-color: var(--white);
+border-bottom: 1px solid var(--border);
+
+
+}
+
+.brand {
+display: flex;
+align-items: center;
+gap: 12px;
+}
+
+.brand-logo {
+display: flex;
+justify-content: center;
+align-items: center;
+
+
+width: 45px;
+height: 45px;
+
+flex-shrink: 0;
+
+border-radius: 12px;
+background-color: var(--yellow);
+
+font-size: 25px;
+font-weight: bold;
+
+
+}
+
+.brand h1 {
+margin: 0;
+font-size: 21px;
+line-height: 1.3;
+}
+
+.brand p {
+margin: 3px 0 0;
+color: var(--muted);
+font-size: 12px;
+}
+
+.system-status {
+display: flex;
+align-items: center;
+gap: 8px;
+
+
+color: var(--muted);
+font-size: 13px;
+
+
+}
+
+.status-dot {
+width: 9px;
+height: 9px;
+
+
+background-color: var(--success);
+border-radius: 50%;
+
+
+}
+
+/* ------------------------------
+Navigation
+------------------------------ */
+
+.main-nav {
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+gap: 8px;
+
+
+padding: 12px 5%;
+
+background-color: var(--white);
+border-bottom: 1px solid var(--border);
+
+
+}
+
+.main-nav a {
+padding: 9px 14px;
+
+
+color: var(--text);
+text-decoration: none;
+
+font-size: 13px;
+font-weight: bold;
+
+border-radius: 8px;
+
+transition: background-color 0.2s ease;
+
+
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+background-color: var(--yellow-light);
+}
+
+.main-nav a.active {
+box-shadow: inset 0 -2px 0 var(--yellow-hover);
+}
+
+@media (max-width: 600px) {
+.main-nav {
+justify-content: flex-start;
+gap: 4px;
+}
+
+
+.main-nav a {
+    padding: 8px 10px;
+}
+
+
+}
+
+/* ------------------------------
+Main Container
+------------------------------ */
+
+.container {
+width: min(1180px, 90%);
+margin: 35px auto;
+}
+
+/* ------------------------------
+Welcome / Hero Section
+------------------------------ */
+
+.welcome-section {
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 25px;
+
+
+margin-bottom: 28px;
+padding: 35px;
+
+background: linear-gradient(
+    120deg,
+    var(--yellow-light),
+    var(--white)
+);
+
+border: 1px solid #f1e8bf;
+border-radius: 16px;
+
+
+}
+
+.eyebrow {
+margin: 0 0 7px;
+
+
+color: #947b20;
+font-size: 11px;
+font-weight: bold;
+letter-spacing: 1.5px;
+
+
+}
+
+.welcome-section h2 {
+margin: 0;
+font-size: clamp(24px, 4vw, 34px);
+line-height: 1.3;
+}
+
+.welcome-description {
+max-width: 650px;
+margin: 12px 0 0;
+color: var(--muted);
+}
+
+.welcome-icon {
+display: flex;
+justify-content: center;
+align-items: center;
+
+
+flex-shrink: 0;
+
+width: 90px;
+height: 90px;
+
+background-color: var(--yellow);
+border-radius: 24px;
+
+font-size: 42px;
+font-weight: bold;
+
+
+}
+
+/* ------------------------------
+Cards and Sections
+------------------------------ */
+
+.card {
+margin-bottom: 25px;
+padding: 28px;
+
+
+background-color: var(--white);
+border: 1px solid var(--border);
+border-radius: 15px;
+
+box-shadow: var(--shadow);
+
+
+}
+
+.section-heading {
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 20px;
+
+
+margin-bottom: 25px;
+
+
+}
+
+.section-heading h2 {
+margin: 0;
+font-size: 22px;
+}
+
+.section-description {
+margin: 5px 0 0;
+color: var(--muted);
+font-size: 13px;
+}
+
+.form-subheading {
+margin: 24px 0 16px;
+padding-bottom: 10px;
+
+
+border-bottom: 1px solid var(--border);
+
+font-size: 16px;
+
+
+}
+
+.form-subheading:first-child {
+margin-top: 0;
+}
+
+/* ------------------------------
+Forms
+------------------------------ */
+
+.form-grid {
+display: grid;
+grid-template-columns: repeat(2, minmax(0, 1fr));
+gap: 20px;
+}
+
+.form-group {
+display: flex;
+flex-direction: column;
+gap: 7px;
+
+
+min-width: 0;
+margin-bottom: 17px;
+
+
+}
+
+.form-group label {
+font-size: 13px;
+font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+width: 100%;
+min-height: 44px;
+
+
+padding: 10px 12px;
+
+color: var(--text);
+background-color: var(--white);
+
+border: 1px solid #dcdacf;
+border-radius: 8px;
+
+outline: none;
+
+transition: border-color 0.2s, box-shadow 0.2s;
+
+
+}
+
+.form-group input:focus,
+.form-group select:focus {
+border-color: #c5a72f;
+box-shadow: 0 0 0 3px rgba(245, 217, 107, 0.25);
+}
+
+.form-group input::placeholder {
+color: #aaa99f;
+}
+
+.form-actions {
+display: flex;
+flex-wrap: wrap;
+gap: 10px;
+
+
+margin-top: 10px;
+
+
+}
+
+/* ------------------------------
+Buttons
+------------------------------ */
+
+.button {
+display: inline-flex;
+justify-content: center;
+align-items: center;
+gap: 8px;
+
+
+min-height: 42px;
+padding: 10px 18px;
+
+border: 1px solid transparent;
+border-radius: 8px;
+
+font-size: 13px;
+font-weight: bold;
+text-decoration: none;
+
+transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+
+
+}
+
+.button-primary {
+color: var(--text);
+background-color: var(--yellow);
+}
+
+.button-primary:hover {
+background-color: var(--yellow-hover);
+}
+
+.button-secondary {
+color: var(--text);
+background-color: var(--white);
+border-color: var(--border);
+}
+
+.button-secondary:hover {
+background-color: var(--yellow-light);
+border-color: var(--yellow);
+}
+
+.button-full {
+width: 100%;
+}
+
+/* ------------------------------
+Transaction Cards
+Used across the website
+------------------------------ */
+
+.transaction-grid {
+display: grid;
+grid-template-columns: repeat(3, minmax(0, 1fr));
+gap: 20px;
+}
+
+.transaction-card {
+min-width: 0;
+padding: 22px;
+
+
+background-color: #fffefa;
+border: 1px solid var(--border);
+border-radius: 12px;
+
+
+}
+
+.transaction-icon {
+display: flex;
+justify-content: center;
+align-items: center;
+
+
+width: 42px;
+height: 42px;
+margin-bottom: 14px;
+
+background-color: var(--yellow-light);
+border: 1px solid #f0e5b8;
+border-radius: 10px;
+
+font-size: 23px;
+font-weight: bold;
+
+
+}
+
+.transaction-card h3 {
+margin: 0;
+font-size: 17px;
+}
+
+.transaction-description {
+min-height: 42px;
+margin: 7px 0 20px;
+
+
+color: var(--muted);
+font-size: 12px;
+
+
+}
+
+/* ------------------------------
+Home Page Quick Actions
+Four cards in one desktop row
+------------------------------ */
+
+.quick-actions-section {
+margin-top: 0;
+}
+
+.quick-actions-section .section-heading {
+margin-bottom: 25px;
+}
+
+.quick-actions-section .transaction-grid {
+grid-template-columns: repeat(4, minmax(0, 1fr));
+align-items: stretch;
+gap: 18px;
+}
+
+.quick-actions-section .transaction-card {
+display: flex;
+flex-direction: column;
+height: 100%;
+
+
+padding: 22px 18px;
+
+background-color: #fffefa;
+border: 1px solid var(--border);
+border-radius: 12px;
+
+transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+
+
+}
+
+.quick-actions-section .transaction-card:hover {
+transform: translateY(-4px);
+border-color: #e6d58f;
+box-shadow: 0 8px 22px rgba(40, 40, 32, 0.08);
+}
+
+.quick-actions-section .transaction-icon {
+width: 46px;
+height: 46px;
+margin-bottom: 15px;
+
+
+font-size: 25px;
+
+
+}
+
+.quick-actions-section .transaction-card h3 {
+font-size: 16px;
+line-height: 1.4;
+}
+
+.quick-actions-section .transaction-description {
+flex-grow: 1;
+min-height: 60px;
+margin: 10px 0 20px;
+
+
+font-size: 12px;
+line-height: 1.6;
+
+
+}
+
+.quick-actions-section .button-full {
+width: 100%;
+margin-top: auto;
+padding: 10px 8px;
+
+
+text-align: center;
+white-space: nowrap;
+
+
+}
+
+/* ------------------------------
+Tables
+------------------------------ */
+
+.table-wrapper {
+width: 100%;
+overflow-x: auto;
+}
+
+table {
+width: 100%;
+border-collapse: collapse;
+white-space: nowrap;
+}
+
+thead {
+background-color: var(--yellow-light);
+}
+
+th,
+td {
+padding: 14px 15px;
+text-align: left;
+
+
+border-bottom: 1px solid var(--border);
+font-size: 13px;
+
+
+}
+
+th {
+font-weight: bold;
+}
+
+tbody tr:hover {
+background-color: #fffdf4;
+}
+
+tbody tr:last-child td {
+border-bottom: none;
+}
+
+/* ------------------------------
+Transaction History Form
+------------------------------ */
+
+.history-form {
+display: flex;
+align-items: flex-end;
+gap: 15px;
+
+
+margin-bottom: 22px;
+
+
+}
+
+.history-form .form-group {
+width: min(300px, 100%);
+margin-bottom: 0;
+}
+
+/* ------------------------------
+Success and Error Messages
+------------------------------ */
+
+.message {
+margin-bottom: 22px;
+padding: 14px 18px;
+
+
+border-radius: 9px;
+font-size: 14px;
+overflow-wrap: anywhere;
+
+
+}
+
+.message.success {
+color: var(--success);
+background-color: var(--success-background);
+border: 1px solid #ccebd5;
+}
+
+.message.error {
+color: var(--error);
+background-color: var(--error-background);
+border: 1px solid #f5cfca;
+}
+
+/* ------------------------------
+Footer
+Supports both .footer and .site-footer
+------------------------------ */
+
+.footer,
+.site-footer {
+margin-top: 35px;
+padding: 25px 6%;
+
+
+color: var(--muted);
+background-color: var(--white);
+border-top: 1px solid var(--border);
+
+text-align: center;
+font-size: 12px;
+
+
+}
+
+.footer p,
+.site-footer p {
+margin: 3px 0;
+}
+
+/* Footer brand layout if used */
+.footer-content {
+width: min(1180px, 100%);
+margin: 0 auto;
+}
+
+.footer-brand {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 12px;
+
+
+margin-bottom: 16px;
+text-align: left;
+
+
+}
+
+.footer-brand h3 {
+margin: 0;
+color: var(--text);
+font-size: 18px;
+}
+
+.footer-brand p {
+margin: 3px 0 0;
+color: var(--muted);
+}
+
+.footer-brand .brand-logo {
+flex-shrink: 0;
+}
+
+.footer-description {
+margin: 12px 0 20px;
+}
+
+.footer-bottom {
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+gap: 10px;
+
+
+margin-top: 18px;
+padding-top: 15px;
+
+border-top: 1px solid var(--border);
+text-align: left;
+
+
+}
+
+/* ------------------------------
+General Link Styling
+------------------------------ */
+
+.main-nav a,
+a.button,
+.feature-card a {
+text-decoration: none;
+}
+
+/* ------------------------------
+Accounts and Transactions Page
+------------------------------ */
+
+.accounts-page .transaction-grid,
+.transactions-page .transaction-grid {
+max-width: 800px;
+margin-left: auto;
+margin-right: auto;
+}
+
+/* ------------------------------
+Responsive Design
+------------------------------ */
+
+/* Tablets and smaller laptops */
+@media (max-width: 1000px) {
+.quick-actions-section .transaction-grid {
+grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+}
+
+/* General tablet layout */
+@media (max-width: 900px) {
+.transaction-grid {
+grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+
+.transaction-card:last-child {
+    grid-column: auto;
+}
+
+
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+.topbar {
+align-items: flex-start;
+flex-direction: column;
+padding: 16px 5%;
+}
+
+
+.container {
+    width: 92%;
+    margin: 22px auto;
+}
+
+.welcome-section {
+    align-items: flex-start;
+    padding: 24px;
+}
+
+.welcome-icon {
+    display: none;
+}
+
+.card {
+    padding: 20px;
+}
+
+.section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.form-grid,
+.transaction-grid,
+.quick-actions-section .transaction-grid {
+    grid-template-columns: 1fr;
+}
+
+.transaction-card:last-child {
+    grid-column: auto;
+}
+
+.quick-actions-section .transaction-card {
+    padding: 22px;
+}
+
+.quick-actions-section .transaction-description {
+    min-height: 0;
+}
+
+.history-form {
+    align-items: stretch;
+    flex-direction: column;
+}
+
+.history-form .form-group {
+    width: 100%;
+}
+
+.form-actions {
+    flex-direction: column;
+}
+
+.form-actions .button {
+    width: 100%;
+}
+
+.footer,
+.site-footer {
+    padding: 22px 5%;
+}
+
+.footer-bottom {
+    flex-direction: column;
+    text-align: center;
+}
+
+
+}
+
+
+/* Fix loan page welcome section to match Accounts page */
+.loan-welcome {
+    display: block !important;
+    padding: 48px 52px !important;
+}
+
+.loan-welcome .eyebrow {
+    display: block;
+    margin-bottom: 16px;
+}
+
+.loan-welcome h2 {
+    display: block;
+    margin: 0 0 18px;
+    font-size: 2.5rem;
+    line-height: 1.2;
+}
+
+.loan-welcome > p:last-child {
+    display: block;
+    margin: 0;
+    line-height: 1.6;
+}
